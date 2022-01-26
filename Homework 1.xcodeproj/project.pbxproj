@@ -14,6 +14,8 @@
 		529200AF279F3116007BFBDD /* Homework_1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529200AE279F3116007BFBDD /* Homework_1Tests.swift */; };
 		529200B9279F3116007BFBDD /* Homework_1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529200B8279F3116007BFBDD /* Homework_1UITests.swift */; };
 		529200BB279F3116007BFBDD /* Homework_1UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529200BA279F3116007BFBDD /* Homework_1UITestsLaunchTests.swift */; };
+		529200C827A1B8D4007BFBDD /* Sphere.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529200C727A1B8D3007BFBDD /* Sphere.swift */; };
+		529200CA27A1B8E3007BFBDD /* Bounding Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529200C927A1B8E3007BFBDD /* Bounding Box.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,8 @@
 		529200B4279F3116007BFBDD /* Homework 1UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Homework 1UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		529200B8279F3116007BFBDD /* Homework_1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Homework_1UITests.swift; sourceTree = "<group>"; };
 		529200BA279F3116007BFBDD /* Homework_1UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Homework_1UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		529200C727A1B8D3007BFBDD /* Sphere.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sphere.swift; sourceTree = "<group>"; };
+		529200C927A1B8E3007BFBDD /* Bounding Box.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bounding Box.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,8 @@
 			children = (
 				5292009C279F3114007BFBDD /* Homework_1App.swift */,
 				5292009E279F3114007BFBDD /* ContentView.swift */,
+				529200C727A1B8D3007BFBDD /* Sphere.swift */,
+				529200C927A1B8E3007BFBDD /* Bounding Box.swift */,
 				529200A0279F3116007BFBDD /* Assets.xcassets */,
 				529200A5279F3116007BFBDD /* Homework_1.entitlements */,
 				529200A2279F3116007BFBDD /* Preview Content */,
@@ -259,8 +265,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				529200CA27A1B8E3007BFBDD /* Bounding Box.swift in Sources */,
 				5292009F279F3114007BFBDD /* ContentView.swift in Sources */,
 				5292009D279F3114007BFBDD /* Homework_1App.swift in Sources */,
+				529200C827A1B8D4007BFBDD /* Sphere.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
