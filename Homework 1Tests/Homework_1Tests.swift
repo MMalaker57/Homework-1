@@ -11,7 +11,7 @@ import XCTest
 class Homework_1Tests: XCTestCase {
 
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        continueAfterFailure = false
     }
 
     override func tearDownWithError() throws {
@@ -26,6 +26,52 @@ class Homework_1Tests: XCTestCase {
         // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
     }
 
+
+    func sphereSurfaceAreaTest() async{
+        let radius = 1.0
+        let testSphere = Sphere()
+        var surfaceArea = 0.0
+        surfaceArea = await testSphere.sphereSurfaceArea(radius: radius)
+        XCTAssertEqual(surfaceArea, (4.0/3.0)*Double.pi*pow(radius,3), accuracy: 1.0E-7, "Was not equal to this resolution.")
+        
+    }
+    
+    func sphereVolumeTest() async{
+        let radius = 1.0
+        let testSphere = Sphere()
+        var volume = 0.0
+        volume = await testSphere.sphereVolume(radius: radius)
+        XCTAssertEqual(volume, (4.0)*Double.pi*pow(radius,2), accuracy: 1.0E-7, "Was not equal to this resolution.")
+        
+    }
+    
+    func boundingBoxSurfaceAreaTest() async{
+        let side = 1.0
+        let testBox = Bounding_Box()
+        var surfaceArea = 0.0
+        surfaceArea = await testBox.cuboidSurfaceArea(numberOfSides: 3, sideOneDimension: side, sideTwoDimension: side, sideThreeDimension: side)
+        XCTAssertEqual(surfaceArea, (6)*pow(side,2), accuracy: 1.0E-7, "Was not equal to this resolution.")
+        
+        var perimeter = 0.0
+        perimeter = await testBox.cuboidSurfaceArea(numberOfSides: 2, sideOneDimension: side, sideTwoDimension: side, sideThreeDimension: side)
+        XCTAssertEqual(perimeter, (4*side), accuracy: 1.0E-7, "Was not equal to this resolution.")
+        
+        
+    }
+    
+    func boundingBoxVolumeTest() async{
+        let side = 1.0
+        let testBox = Bounding_Box()
+        var volume = 0.0
+        volume = await testBox.cuboidVolume(numberOfSides: 3, sideOneDimension: side, sideTwoDimension: side, sideThreeDimension: side)
+        XCTAssertEqual(volume, Double.pi*pow(side,3), accuracy: 1.0E-7, "Was not equal to this resolution.")
+        var area = 0.0
+        area = await testBox.cuboidVolume(numberOfSides: 2, sideOneDimension: side, sideTwoDimension: side, sideThreeDimension: side)
+        XCTAssertEqual(area, Double.pi*pow(side,2), accuracy: 1.0E-7, "Was not equal to this resolution.")
+        
+    }
+    
+    
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
         self.measure {

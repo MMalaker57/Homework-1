@@ -18,9 +18,13 @@ class Sphere: NSObject, ObservableObject{
     /// - Returns:
     ///   - volumeOfSphere (Double)
     ///
+    ///
+    ///
+    ///
+    ///
     func sphereVolume(radius: Double) -> Double{
         
-        return (pow(abs(radius),3)*(4.0/3.0)*Double.pi)
+        return (pow(abs(radius),3)*(4.0/3.0)*Double.pi)//Calculate Volume and return as Double
     
     }
     
